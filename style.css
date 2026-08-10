@@ -37,13 +37,23 @@ svg{display:block;}
 
 /* ---------- SITE HEADER / NAV (shared across every page) ---------- */
 header.hero{
-  background:
-    repeating-linear-gradient(115deg, rgba(37,49,61,0.03) 0 2px, transparent 2px 60px),
-    linear-gradient(180deg,var(--deep-2) 0%, var(--paper) 100%);
+  background:linear-gradient(180deg,var(--deep-2) 0%, var(--paper) 100%);
   color:var(--ink);
   padding:20px 0 70px;
   position:relative;
   overflow:hidden;
+}
+header.hero::before{
+  content:"";
+  position:absolute;
+  top:-15%;
+  right:-10%;
+  width:55%;
+  height:140%;
+  background:repeating-linear-gradient(35deg, rgba(217,169,76,0.12) 0 1px, transparent 1px 22px);
+  -webkit-mask-image:linear-gradient(115deg, transparent 0%, black 40%, black 68%, transparent 100%);
+  mask-image:linear-gradient(115deg, transparent 0%, black 40%, black 68%, transparent 100%);
+  pointer-events:none;
 }
 header.hero.compact{padding-bottom:44px;}
 .topbar{

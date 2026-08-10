@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +14,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="alternate" hreflang="en" href="https://yorkregionrenopros.ca/index.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://yorkregionrenopros.ca/zh.html">
+<link rel="alternate" hreflang="x-default" href="https://yorkregionrenopros.ca/index.html">
 <meta name="language" content="zh-Hant">
 </head>
 <body>
@@ -24,7 +27,7 @@
 <a class="brand" href="zh.html">YORK REGION <span style="color:var(--ochre)">RENO PROS</span></a>
 <nav class="site-nav">
 <a href="index.html">English</a>
-</nav>
+</nav><div class="lang-switch"><select onchange="if(this.value)location.href=this.value;" aria-label="選擇語言"><option value="index.html">EN</option><option value="" selected>中文</option></select></div>
 </div>
 <div class="hero-grid">
 <div>
@@ -130,6 +133,37 @@
 </div>
 </div>
 </section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">按地區瀏覽</div>
+      <h2>各城市及項目裝修頁面</h2>
+      <p>直接前往您所需項目的頁面。</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:32px;">
+        <div>
+          <h3 style="font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:1.05rem;margin-bottom:12px;">列治文山</h3>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+          <li><a href="richmond-hill-kitchen-renovation-zh.html">廚房裝修</a></li>
+          <li><a href="richmond-hill-bathroom-renovation-zh.html">浴室裝修</a></li>
+          <li><a href="richmond-hill-basement-renovation-zh.html">地庫裝修</a></li>
+          <li><a href="richmond-hill-whole-home-renovation-zh.html">全屋翻新</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:1.05rem;margin-bottom:12px;">萬錦</h3>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+          <li><a href="markham-kitchen-renovation-zh.html">廚房裝修</a></li>
+          <li><a href="markham-bathroom-renovation-zh.html">浴室裝修</a></li>
+          <li><a href="markham-basement-renovation-zh.html">地庫裝修</a></li>
+          <li><a href="markham-whole-home-renovation-zh.html">全屋翻新</a></li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</section>
+
 <div class="notes-band">
 <div class="wrap">
 <div class="notes-row">
@@ -231,6 +265,25 @@
     document.getElementById('zh-confirmBox').classList.add('show');
   });
 
+</script>
+<script>
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  var area = params.get('area');
+  var type = params.get('type');
+  if(area){
+    var zipEl = document.getElementById('zh-zip');
+    if(zipEl){ zipEl.value = area; }
+  }
+  if(type){
+    setTimeout(function(){
+      var boxes = document.querySelectorAll('#zh-jobtype-group input[type="checkbox"]');
+      boxes.forEach(function(b){
+        if(b.value === type){ b.checked = true; }
+      });
+    }, 50);
+  }
+})();
 </script>
 </body>
 </html>

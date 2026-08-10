@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://yorkregionrenopros.ca/</loc><priority>1.0</priority></url>
+  <url><loc>https://yorkregionrenopros.ca/zh.html</loc><priority>0.9</priority></url>
   <url><loc>https://yorkregionrenopros.ca/richmond-hill-kitchen-renovation.html</loc><priority>0.9</priority></url>
   <url><loc>https://yorkregionrenopros.ca/richmond-hill-bathroom-renovation.html</loc><priority>0.9</priority></url>
   <url><loc>https://yorkregionrenopros.ca/richmond-hill-basement-renovation.html</loc><priority>0.9</priority></url>
@@ -13,10 +14,17 @@
   <url><loc>https://yorkregionrenopros.ca/vaughan-bathroom-renovation.html</loc><priority>0.9</priority></url>
   <url><loc>https://yorkregionrenopros.ca/vaughan-basement-renovation.html</loc><priority>0.9</priority></url>
   <url><loc>https://yorkregionrenopros.ca/vaughan-whole-home-renovation.html</loc><priority>0.9</priority></url>
+  <url><loc>https://yorkregionrenopros.ca/richmond-hill-kitchen-renovation-zh.html</loc><priority>0.8</priority></url>
+  <url><loc>https://yorkregionrenopros.ca/richmond-hill-bathroom-renovation-zh.html</loc><priority>0.8</priority></url>
+  <url><loc>https://yorkregionrenopros.ca/richmond-hill-basement-renovation-zh.html</loc><priority>0.8</priority></url>
+  <url><loc>https://yorkregionrenopros.ca/richmond-hill-whole-home-renovation-zh.html</loc><priority>0.8</priority></url>
+  <url><loc>https://yorkregionrenopros.ca/markham-kitchen-renovation-zh.html</loc><priority>0.8</priority></url>
+  <url><loc>https://yorkregionrenopros.ca/markham-bathroom-renovation-zh.html</loc><priority>0.8</priority></url>
+  <url><loc>https://yorkregionrenopros.ca/markham-basement-renovation-zh.html</loc><priority>0.8</priority></url>
+  <url><loc>https://yorkregionrenopros.ca/markham-whole-home-renovation-zh.html</loc><priority>0.8</priority></url>
   <url><loc>https://yorkregionrenopros.ca/articles.html</loc><priority>0.7</priority></url>
   <url><loc>https://yorkregionrenopros.ca/article-kitchen-remodel-cost.html</loc><priority>0.6</priority></url>
   <url><loc>https://yorkregionrenopros.ca/article-hiring-checklist.html</loc><priority>0.6</priority></url>
   <url><loc>https://yorkregionrenopros.ca/article-aging-in-place.html</loc><priority>0.6</priority></url>
   <url><loc>https://yorkregionrenopros.ca/directory.html</loc><priority>0.5</priority></url>
-  <url><loc>https://yorkregionrenopros.ca/zh.html</loc><priority>0.6</priority></url>
 </urlset>

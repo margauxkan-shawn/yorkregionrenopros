@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>約克區裝修配對 York Region Reno Pros — 免費配對本地認證裝修師傅</title>
+<meta name="description" content="在列治文山、萬錦、旺市發布您的廚房、浴室、地庫或全屋裝修項目,免費配對經認證的本地師傅。">
+<link rel="canonical" href="https://yorkregionrenopros.ca/zh.html">
+<meta property="og:title" content="約克區裝修配對 York Region Reno Pros — 免費配對本地認證裝修師傅">
+<meta property="og:description" content="在列治文山、萬錦、旺市發布您的廚房、浴室、地庫或全屋裝修項目,免費配對經認證的本地師傅。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yorkregionrenopros.ca/zh.html">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<meta name="language" content="zh-Hant">
+</head>
+<body>
+<div>
+<header class="hero">
+<div class="wrap">
+<div class="topbar">
+<a class="brand" href="zh.html">YORK REGION<span style="color:var(--ochre)">RENOPROS</span></a>
+<nav class="site-nav">
+<a href="index.html">English</a>
+</nav>
+<div class="phone">致電/短信 (555) 010-4477</div>
+</div>
+<div class="hero-grid">
+<div>
+<div class="eyebrow">服務列治文山、萬錦、旺市地區</div>
+<h1>廚房、浴室、地庫、<span class="accent">全屋裝修。</span></h1>
+<p class="hero-sub">發布您的裝修項目,免費配對經認證的本地師傅 — 住宅或商用皆可,大約一分鐘完成。</p>
+</div>
+<div aria-hidden="true" class="ticket-preview">
+<div class="thead">
+<div class="title">項目諮詢單</div>
+<div class="no">NO. 00214-A</div>
+</div>
+<div class="ticket-row"><span>類型</span><span id="zh-pv-type">廚房裝修</span></div>
+<div class="ticket-row"><span>地區</span><span>北約克, 安省</span></div>
+<div class="ticket-row" style="border-bottom:none;"><span>配對狀態</span><span>已通知本地師傅</span></div>
+<div class="stamp">進行中</div>
+</div>
+</div>
+</div>
+</header>
+<div class="mini-steps-wrap">
+<div class="wrap">
+<div class="mini-steps">
+<div class="mini-step"><span class="n">01</span><span class="t"><b>描述項目</b>類型、地區、時間</span></div>
+<div class="mini-step"><span class="n">02</span><span class="t"><b>為您配對</b>經認證的本地師傅</span></div>
+<div class="mini-step"><span class="n">03</span><span class="t"><b>師傅聯繫您</b>提供報價,無壓力</span></div>
+</div>
+</div>
+</div>
+<section class="apply" id="zh-ticket-form">
+<div class="wrap">
+<div class="sec-head">
+<div class="eyebrow">開始項目諮詢</div>
+<h2>告訴我們您的裝修項目</h2>
+<p>一分鐘完成,完全免費,無需承諾雇用。</p>
+</div>
+<div class="tabbar" role="tablist">
+<button class="active" data-tab="residential" onclick="selectAudienceZh('residential')">住宅</button>
+<button data-tab="commercial" onclick="selectAudienceZh('commercial')">商用</button>
+</div>
+<div class="ticket-wrap">
+<div class="ticket-strip">
+<span class="title" id="zh-form-title">住宅項目諮詢單</span>
+<span class="no" id="zh-ticket-no">NO. ------</span>
+</div>
+<form id="zh-leadForm">
+<div class="field">
+<label id="zh-jobtype-label">這是什麼類型的項目?</label>
+<div class="checkbox-grid" id="zh-jobtype-group"></div>
+<div class="field-error" id="zh-jobtype-error">請至少選擇一項,或在「其他」中說明。</div>
+</div>
+<div class="field">
+<label for="zh-desc">簡單描述一下項目</label>
+<textarea id="zh-desc" placeholder="例如:全屋廚房翻新,約200平方英尺。" required="" rows="2"></textarea>
+</div>
+<div class="field-row">
+<div class="field">
+<label for="zh-zip">郵編/地區</label>
+<input id="zh-zip" placeholder="例如:北約克" required="" type="text"/>
+</div>
+<div class="field">
+<label for="zh-timeline">時間安排</label>
+<select id="zh-timeline" required="">
+<option value="">請選擇</option>
+<option>準備開始</option>
+<option>三個月內</option>
+<option>規劃階段</option>
+<option>只是了解一下</option>
+</select>
+</div>
+</div>
+<div class="field-row">
+<div class="field">
+<label for="zh-budget" id="zh-budget-label">大約預算</label>
+<select id="zh-budget" required=""></select>
+</div>
+<div class="field">
+<label for="zh-phone">電話</label>
+<input id="zh-phone" placeholder="方便師傅聯繫您" required="" type="tel"/>
+</div>
+</div>
+<div class="field-row">
+<div class="field">
+<label for="zh-name" id="zh-name-label">姓名</label>
+<input id="zh-name" required="" type="text"/>
+</div>
+<div class="field">
+<label for="zh-email">電郵</label>
+<input id="zh-email" required="" type="email"/>
+</div>
+</div>
+<div class="submit-row">
+<button class="btn btn-primary" type="submit">提交項目諮詢單</button>
+<span class="fine">本地師傅將直接與您聯繫。</span>
+</div>
+<div class="privacy-note">我們絕不出售您的資料 — 只有配對的師傅可以查看。</div>
+</form>
+<div class="confirm" id="zh-confirmBox">
+<div class="stampbig">APPROVED</div>
+<h3>您的諮詢單已提交。</h3>
+<p>我們正在為您配對本地師傅 — 預計幾小時內會有電話或短信聯繫您。</p>
+</div>
+</div>
+</div>
+</section>
+<div class="notes-band">
+<div class="wrap">
+<div class="notes-row">
+<div class="note">
+<p class="quote">「抱著試試看的心態發布了廚房裝修需求,沒想到兩天內就有師傅上門查看。」</p>
+<div class="who">— Priya, 萬錦市 · 住宅</div>
+</div>
+<div class="note">
+<p class="quote">「租約截止日期前急需完成辦公室裝修,配對到的師傅立刻理解我們的時間要求。」</p>
+<div class="who">— Devon, 怡陶碧谷 · 商用</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="wrap">
+<div>© 2026 York Region Reno Pros — 本地裝修配對服務。</div>
+<div class="footer-links">
+<a href="zh.html">首頁</a>
+<a href="index.html">English</a>
+</div>
+</div>
+</footer>
+</div><script>
+
+  document.getElementById('zh-ticket-no').textContent = 'NO. ' + Math.floor(10000 + Math.random()*89999);
+
+  var jobTypesZh = {
+    residential: ["廚房裝修","浴室裝修","地庫裝修","全屋翻新","房屋擴建","地板與內部裝飾","無障礙及老年友善改造","油漆及室內裝飾"],
+    commercial: ["辦公室裝修","零售店裝修","餐飲及酒店裝修","租戶裝修","倉庫及輕工業裝修","物業設施升級","醫療及牙科診所","多單位物業翻新"]
+  };
+  var budgetsZh = {
+    residential: ["少於$10,000","$10,000 – $30,000","$30,000 – $75,000","$75,000 – $150,000","$150,000以上","尚未確定"],
+    commercial: ["少於$25,000","$25,000 – $75,000","$75,000 – $200,000","$200,000 – $500,000","$500,000以上","尚未確定"]
+  };
+
+  function populateSelectZh(id, options){
+    var sel = document.getElementById(id);
+    sel.innerHTML = '<option value="">Select…</option>' + options.map(function(o){return '<option>'+o+'</option>';}).join('');
+  }
+
+  function populateJobTypeCheckboxesZh(kind){
+    var group = document.getElementById('zh-jobtype-group');
+    var tiles = jobTypesZh[kind].map(function(o, i){
+      var id = 'zh-jt-' + kind + '-' + i;
+      return '<label class="check-tile" for="' + id + '"><input type="checkbox" id="' + id + '" name="jobtype" value="' + o + '"><span class="tile-label">' + o + '</span></label>';
+    }).join('');
+    tiles += '<label class="check-tile other-tile" id="zh-other-tile" for="zh-jt-other">' +
+             '<span class="other-head"><input type="checkbox" id="zh-jt-other" name="jobtype" value="其他" onchange="toggleOtherInputZh(this)"><span class="tile-label">其他</span></span>' +
+             '<input type="text" class="other-input" id="zh-jt-other-text" placeholder="請說明您的需求">' +
+             '</label>';
+    group.innerHTML = tiles;
+  }
+
+  function toggleOtherInputZh(checkbox){
+    document.getElementById('zh-other-tile').classList.toggle('checked', checkbox.checked);
+    if(checkbox.checked){ document.getElementById('zh-jt-other-text').focus(); }
+  }
+
+  function selectAudienceZh(kind, scrollToForm){
+    document.querySelectorAll('.tabbar button').forEach(function(btn){
+      btn.classList.toggle('active', btn.dataset.tab === kind);
+    });
+
+    document.getElementById('zh-form-title').textContent = (kind === 'residential' ? '住宅' : '商用') + '項目諮詢單';
+    document.getElementById('zh-budget-label').textContent = kind === 'residential' ? '大約預算' : '項目預算';
+    document.getElementById('zh-name-label').textContent = kind === 'residential' ? '姓名' : '聯繫人姓名';
+
+    populateJobTypeCheckboxesZh(kind);
+    populateSelectZh('zh-budget', budgetsZh[kind]);
+
+    document.getElementById('zh-pv-type').textContent = jobTypesZh[kind][0];
+
+    if(scrollToForm){
+      document.getElementById('zh-ticket-form').scrollIntoView({behavior:'smooth'});
+    }
+  }
+
+  selectAudienceZh('residential');
+
+  document.getElementById('zh-leadForm').addEventListener('submit', function(e){
+    e.preventDefault();
+
+    var checked = document.querySelectorAll('#zh-jobtype-group input[type="checkbox"]:checked');
+    var otherChecked = document.getElementById('zh-jt-other').checked;
+    var otherText = document.getElementById('zh-jt-other-text').value.trim();
+    var valid = checked.length > 0 && (!otherChecked || otherText.length > 0);
+
+    document.getElementById('zh-jobtype-error').classList.toggle('show', !valid);
+    if(!valid){
+      document.getElementById('zh-jobtype-group').scrollIntoView({behavior:'smooth', block:'center'});
+      return;
+    }
+
+    // DEMO ONLY: this form does not currently send data anywhere.
+    // Wire this up to a real endpoint (Formspree, Google Sheet via Apps Script,
+    // your CRM's webhook, etc.) before using this page to collect real leads.
+    document.getElementById('zh-leadForm').style.display = 'none';
+    document.getElementById('zh-confirmBox').classList.add('show');
+  });
+
+</script>
+</body>
+</html>

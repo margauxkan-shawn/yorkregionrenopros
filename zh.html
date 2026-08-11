@@ -41,15 +41,8 @@
 <h1>廚房、浴室、地庫、<span class="accent">全屋裝修。</span></h1>
 <p class="hero-sub">發布您的裝修項目,免費配對經認證的本地師傅 — 住宅或商用皆可,大約一分鐘完成。</p>
 </div>
-<div aria-hidden="true" class="ticket-preview">
-<div class="thead">
-<div class="title">項目諮詢單</div>
-<div class="no">NO. 00214-A</div>
-</div>
-<div class="ticket-row"><span>類型</span><span id="zh-pv-type">廚房裝修</span></div>
-<div class="ticket-row"><span>地區</span><span>北約克, 安省</span></div>
-<div class="ticket-row" style="border-bottom:none;"><span>配對狀態</span><span>已通知本地師傅</span></div>
-<div class="stamp">進行中</div>
+<div class="hero-photo">
+<img src="images/richmond-hill-bathroom-1.jpg" alt="約克區屋主完工的浴室裝修">
 </div>
 </div>
 </div>
@@ -249,8 +242,6 @@
 
     populateJobTypeCheckboxesZh(kind);
     populateSelectZh('zh-budget', budgetsZh[kind]);
-
-    document.getElementById('zh-pv-type').textContent = jobTypesZh[kind][0];
 
     if(scrollToForm){
       document.getElementById('zh-ticket-form').scrollIntoView({behavior:'smooth'});

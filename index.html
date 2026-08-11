@@ -41,15 +41,8 @@
 <h1>Kitchens. Bathrooms. Basements. <span class="accent">Full homes.</span></h1>
 <p class="hero-sub">Post your remodeling project and get matched with a vetted local pro — residential or commercial. Free, and takes about a minute.</p>
 </div>
-<div aria-hidden="true" class="ticket-preview">
-<div class="thead">
-<div class="title">Project Brief</div>
-<div class="no">NO. 00214-A</div>
-</div>
-<div class="ticket-row"><span>Type</span><span id="pv-type">Kitchen remodel</span></div>
-<div class="ticket-row"><span>Area</span><span>Richmond Hill, ON</span></div>
-<div class="ticket-row" style="border-bottom:none;"><span>Matched</span><span>Local pro notified</span></div>
-<div class="stamp">IN PROGRESS</div>
+<div class="hero-photo">
+<img src="images/richmond-hill-bathroom-1.jpg" alt="Bathroom renovation completed for a York Region homeowner">
 </div>
 </div>
 </div>
@@ -250,8 +243,6 @@
 
     populateJobTypeCheckboxes(kind);
     populateSelect('budget', budgets[kind]);
-
-    document.getElementById('pv-type').textContent = jobTypes[kind][0];
 
     if(scrollToForm){
       document.getElementById('ticket-form').scrollIntoView({behavior:'smooth'});

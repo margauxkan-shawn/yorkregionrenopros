@@ -259,12 +259,16 @@
     group.innerHTML = tiles;
   }
 
+  var currentKind = 'residential';
+  var LEADS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzXf_UvNUhk-Nasp7_Pe0zIsDr5_sFZg1y6ZlLInXli3TTYNSDpAsjfs47gIWDUVXmkxw/exec';
+
   function toggleOtherInput(checkbox){
     document.getElementById('other-tile').classList.toggle('checked', checkbox.checked);
     if(checkbox.checked){ document.getElementById('jt-other-text').focus(); }
   }
 
   function selectAudience(kind, scrollToForm){
+    currentKind = kind;
     document.querySelectorAll('.tabbar button').forEach(function(btn){
       btn.classList.toggle('active', btn.dataset.tab === kind);
     });
@@ -297,9 +301,34 @@
       return;
     }
 
-    // DEMO ONLY: this form does not currently send data anywhere.
-    // Wire this up to a real endpoint (Formspree, Google Sheet via Apps Script,
-    // your CRM's webhook, etc.) before using this page to collect real leads.
+    var jobTypeValues = Array.from(checked).map(function(cb){ return cb.value; });
+    if(otherChecked && otherText){
+      jobTypeValues = jobTypeValues.filter(function(v){ return v !== 'Other'; });
+      jobTypeValues.push('Other: ' + otherText);
+    }
+
+    var payload = {
+      language: 'EN',
+      audience: currentKind,
+      jobTypes: jobTypeValues.join(', '),
+      description: document.getElementById('desc').value,
+      area: document.getElementById('zip').value,
+      timeline: document.getElementById('timeline').value,
+      budget: document.getElementById('budget').value,
+      phone: document.getElementById('phone').value,
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value
+    };
+
+    fetch(LEADS_ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    }).catch(function(err){
+      console.error('Lead submission failed to send:', err);
+    });
+
     document.getElementById('leadForm').style.display = 'none';
     document.getElementById('confirmBox').classList.add('show');
   });

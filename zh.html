@@ -259,12 +259,16 @@
     group.innerHTML = tiles;
   }
 
+  var currentKindZh = 'residential';
+  var LEADS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzXf_UvNUhk-Nasp7_Pe0zIsDr5_sFZg1y6ZlLInXli3TTYNSDpAsjfs47gIWDUVXmkxw/exec';
+
   function toggleOtherInputZh(checkbox){
     document.getElementById('zh-other-tile').classList.toggle('checked', checkbox.checked);
     if(checkbox.checked){ document.getElementById('zh-jt-other-text').focus(); }
   }
 
   function selectAudienceZh(kind, scrollToForm){
+    currentKindZh = kind;
     document.querySelectorAll('.tabbar button').forEach(function(btn){
       btn.classList.toggle('active', btn.dataset.tab === kind);
     });
@@ -297,9 +301,34 @@
       return;
     }
 
-    // DEMO ONLY: this form does not currently send data anywhere.
-    // Wire this up to a real endpoint (Formspree, Google Sheet via Apps Script,
-    // your CRM's webhook, etc.) before using this page to collect real leads.
+    var jobTypeValues = Array.from(checked).map(function(cb){ return cb.value; });
+    if(otherChecked && otherText){
+      jobTypeValues = jobTypeValues.filter(function(v){ return v !== '其他'; });
+      jobTypeValues.push('其他: ' + otherText);
+    }
+
+    var payload = {
+      language: 'ZH',
+      audience: currentKindZh,
+      jobTypes: jobTypeValues.join(', '),
+      description: document.getElementById('zh-desc').value,
+      area: document.getElementById('zh-zip').value,
+      timeline: document.getElementById('zh-timeline').value,
+      budget: document.getElementById('zh-budget').value,
+      phone: document.getElementById('zh-phone').value,
+      name: document.getElementById('zh-name').value,
+      email: document.getElementById('zh-email').value
+    };
+
+    fetch(LEADS_ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    }).catch(function(err){
+      console.error('Lead submission failed to send:', err);
+    });
+
     document.getElementById('zh-leadForm').style.display = 'none';
     document.getElementById('zh-confirmBox').classList.add('show');
   });

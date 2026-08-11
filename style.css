@@ -292,10 +292,11 @@ form{padding:30px;}
 .article-body p{margin-bottom:16px;color:var(--ink);}
 .article-body ul, .article-body ol{margin:0 0 16px 22px;color:var(--ink);}
 .article-body li{margin-bottom:8px;}
-.article-body .callout{
+.article-body .callout, .dir-category .callout{
   background:var(--paper-dim);border-left:3px solid var(--ochre);
   padding:18px 22px;margin:26px 0;border-radius:4px;font-size:0.98rem;
 }
+.dir-category .callout a{color:var(--ochre-dark);font-weight:600;}
 .article-meta{
   font-family:'IBM Plex Mono',monospace;font-size:0.85rem;color:var(--slate);
   margin-top:10px;
@@ -416,3 +417,13 @@ footer a:hover{color:var(--chalk);}
 @media (max-width:900px){
   .hero-photo{order:-1;max-width:280px;margin:0 auto;}
 }
+
+/* ---------- DIRECTORY CATEGORY ICONS ---------- */
+.dir-category h2{display:flex;align-items:center;gap:12px;}
+.cat-icon{
+  width:34px;height:34px;flex-shrink:0;
+  background:var(--paper-dim);border-radius:8px;
+  display:inline-flex;align-items:center;justify-content:center;
+  color:var(--ochre-dark);
+}
+.cat-icon svg{width:19px;height:19px;}

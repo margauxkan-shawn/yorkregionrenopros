@@ -14,6 +14,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <style>
 .dir-item .contact{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:0.82rem;color:var(--ink);display:flex;flex-direction:column;gap:4px;}
 .dir-item .contact span{color:var(--slate);}
@@ -29,7 +34,7 @@
 <a href="index.html">Home</a>
 <a href="articles.html">Articles &amp; Tips</a>
 <a href="directory.html">Local Directory</a>
-</nav>
+</nav><div class="lang-switch"><select onchange="if(this.value)location.href=this.value;" aria-label="Choose language"><option value="" selected>EN</option><option value="zh.html">中文</option></select></div>
 </div>
 <div class="page-intro">
 <div class="eyebrow">Local resources</div>
@@ -121,6 +126,66 @@
             <div><span>Hours:</span> Tue–Fri 10am–6pm, Sat 10am–5pm, Sun–Mon closed</div>
           </div>
 </div>
+<div class="dir-item">
+<div class="name">Aline Wholesale Cabinetry</div>
+<div class="area">Vaughan, ON</div>
+<p>Kitchen and bathroom cabinetry direct from the manufacturer, including MDF and solid-wood door options at wholesale pricing.</p>
+          <div class="contact">
+            <div><span>Address:</span> 51 Vinyl Ct, Woodbridge, ON L4L 4A3</div>
+            <div><span>Phone:</span> (905) 597-7700</div>
+            <div><span>Hours:</span> Mon–Fri 8am–5pm, Sat–Sun closed</div>
+          </div>
+</div>
+</div>
+</div>
+<div class="dir-category">
+<h2>Flooring</h2>
+<div class="dir-list">
+<div class="dir-item">
+<div class="name">Hardwood Giant</div>
+<div class="area">Vaughan, ON</div>
+<p>Large flooring showroom carrying hardwood, laminate, and vinyl, with in-house installation crews.</p>
+          <div class="contact">
+            <div><span>Address:</span> 4300 Steeles Ave W #28, Woodbridge, ON L4L 4C2</div>
+            <div><span>Phone:</span> (905) 918-3900</div>
+            <div><span>Hours:</span> Mon–Fri 9:30am–7pm, Sat 10am–6pm, Sun 11am–5pm</div>
+          </div>
+</div>
+<div class="dir-item">
+<div class="name">Remodel Canada — Carpet One Floor &amp; Home</div>
+<div class="area">North York, ON</div>
+<p>Full-service flooring retailer and installer, also known for stair refinishing and trim work.</p>
+          <div class="contact">
+            <div><span>Address:</span> 75 Torbarrie Rd, North York, ON M3L 1G5</div>
+            <div><span>Phone:</span> (647) 558-3211</div>
+            <div><span>Hours:</span> Mon–Fri 7am–5pm, Sat 8am–4pm, Sun 9am–2pm</div>
+          </div>
+</div>
+</div>
+</div>
+<div class="dir-category">
+<h2>Landscaping</h2>
+<div class="dir-list">
+<div class="dir-item">
+<div class="name">Emerald Landscaping and Construction</div>
+<div class="area">Richmond Hill, ON</div>
+<p>Hardscaping, interlock, decks, and full backyard design-build projects.</p>
+          <div class="contact">
+            <div><span>Address:</span> 20 Jefferson Forest Dr, Richmond Hill, ON L4E 4H9</div>
+            <div><span>Phone:</span> (416) 893-3657</div>
+            <div><span>Hours:</span> Mon–Sun 8am–9pm</div>
+          </div>
+</div>
+<div class="dir-item">
+<div class="name">Terrastone Landscaping</div>
+<div class="area">Markham, ON</div>
+<p>Interlock patios, pergolas, and hardscaping, with a design-first approach for larger backyard projects.</p>
+          <div class="contact">
+            <div><span>Address:</span> 151 Bentley St #11, Markham, ON L3R 3L2</div>
+            <div><span>Phone:</span> (647) 277-9088</div>
+            <div><span>Hours:</span> Mon–Sat 8am–9pm, Sun closed</div>
+          </div>
+</div>
 </div>
 </div>
 <div class="dir-category">
@@ -182,7 +247,6 @@
 <a href="index.html">Home</a>
 <a href="articles.html">Articles &amp; Tips</a>
 <a href="directory.html">Local Directory</a>
-<a href="zh.html">中文</a>
 </div>
 </div>
 </footer>

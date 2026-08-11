@@ -157,9 +157,9 @@
 <div class="privacy-note">We never sell your info — only the pro we match you with sees it.</div>
 </form>
 <div class="confirm" id="confirmBox">
-<div class="stampbig">APPROVED</div>
 <h3>Your brief is filed.</h3>
 <p>We're matching it to a pro in your area now — expect a call or text within a couple hours.</p>
+<a href="#" class="back-link" style="margin:16px 0 0;" onclick="submitAnotherRequest();return false;">Submit another request →</a>
 </div>
 </div>
 </div>
@@ -332,6 +332,15 @@
     document.getElementById('leadForm').style.display = 'none';
     document.getElementById('confirmBox').classList.add('show');
   });
+
+  function submitAnotherRequest(){
+    document.getElementById('leadForm').reset();
+    document.getElementById('confirmBox').classList.remove('show');
+    document.getElementById('leadForm').style.display = '';
+    document.getElementById('jobtype-error').classList.remove('show');
+    selectAudience(currentKind);
+    document.getElementById('ticket-form').scrollIntoView({behavior:'smooth'});
+  }
 
 </script>
 <script>

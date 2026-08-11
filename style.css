@@ -367,3 +367,12 @@ footer a:hover{color:var(--chalk);}
   content:"▾";position:absolute;right:16px;top:50%;transform:translateY(-50%);
   font-size:0.85rem;color:var(--slate);pointer-events:none;
 }
+
+/* ---------- RECENT PROJECT PHOTOS ---------- */
+.project-gallery{padding:10px 0 10px;}
+.project-gallery .sec-head{margin-bottom:24px;}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;}
+.gallery-grid img{
+  width:100%;height:260px;object-fit:cover;border-radius:10px;
+  border:1px solid var(--line);display:block;
+}

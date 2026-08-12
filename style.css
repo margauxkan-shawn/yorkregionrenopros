@@ -182,7 +182,7 @@ section{padding:60px 0;}
 .apply .tabbar button.active{background:var(--ochre);color:var(--ink);}
 
 .ticket-wrap{
-  max-width:640px;
+  max-width:900px;
   background:var(--white);color:var(--ink);border-radius:8px;
   box-shadow:0 20px 50px rgba(0,0,0,0.3);
   position:relative;overflow:hidden;
@@ -194,7 +194,7 @@ section{padding:60px 0;}
 }
 .ticket-strip .title{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;font-size:1rem;}
 .ticket-strip .no{font-family:'IBM Plex Mono',monospace;font-size:0.85rem;color:var(--ochre-dark);}
-form{padding:30px;}
+form{padding:36px 40px;}
 .field{margin-bottom:18px;}
 .field label{
   display:block;font-family:'IBM Plex Mono',monospace;font-size:0.8rem;
@@ -208,9 +208,10 @@ form{padding:30px;}
 .field input:focus, .field select:focus, .field textarea:focus{
   border-color:var(--chalk);
 }
-.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.field-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+.field-row.field-row-2{grid-template-columns:1fr 1fr;}
 
-.checkbox-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.checkbox-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;}
 .check-tile{
   display:flex;align-items:center;gap:16px;
   border:1px solid var(--line);border-radius:5px;
@@ -438,3 +439,16 @@ footer a:hover{color:var(--chalk);}
   transition:border-color .15s ease;
 }
 .dir-item .contact-links a:hover{border-color:var(--ochre-dark);}
+
+/* ---------- MULTI-STEP FORM WIZARD ---------- */
+.btn-secondary{background:transparent;color:var(--slate);border:1.5px solid var(--line);}
+.btn-secondary:hover{border-color:var(--ink);color:var(--ink);}
+.step-indicator{
+  font-family:'IBM Plex Mono',monospace;font-size:0.8rem;font-weight:600;
+  letter-spacing:0.04em;color:var(--ochre-dark);margin-bottom:18px;
+}
+.form-step{display:none;}
+.form-step.active{display:block;animation:stepIn .25s ease;}
+@keyframes stepIn{from{opacity:0;transform:translateX(8px);}to{opacity:1;transform:translateX(0);}}
+.step-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;gap:12px;}
+.form-step[data-step="1"] .step-nav{justify-content:flex-end;}
